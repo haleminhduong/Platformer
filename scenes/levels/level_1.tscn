@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhfcub2h0ysc0"]
+[gd_scene load_steps=8 format=3 uid="uid://dhfcub2h0ysc0"]
 
 [ext_resource type="Texture2D" uid="uid://godv1eug31mq" path="res://assets/sprites/world_tileset.png" id="1_85psc"]
 [ext_resource type="PackedScene" uid="uid://yova74ossymy" path="res://scenes/entities/killzone.tscn" id="1_pg6pd"]
 [ext_resource type="PackedScene" uid="uid://c3ngrtpw56ksn" path="res://scenes/entities/player.tscn" id="2_uxjmb"]
+[ext_resource type="PackedScene" uid="uid://bbifel7kcrg1v" path="res://scenes/entities/enemy.tscn" id="4_bm1ja"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2dyxe"]
 
@@ -423,7 +424,7 @@ shape = SubResource("WorldBoundaryShape2D_2dyxe")
 z_index = 10
 position = Vector2(91, 431)
 scale = Vector2(3, 3)
-collision_mask = 8
+collision_mask = 12
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -432,3 +433,9 @@ scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_hdrcv")
 format = 2
 layer_0/tile_data = PackedInt32Array(262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 262137, 0, 0, 262136, 0, 0, 327673, 65536, 0, 327672, 0, 1, 327674, 0, 1, 327675, 0, 1, 327676, 0, 1, 327677, 0, 1, 327678, 65536, 1, 327679, 0, 1, 262144, 0, 1, 262145, 65536, 0, 262146, 0, 1, 262147, 0, 1, 262148, 0, 1, 262149, 0, 1, 262150, 65536, 1, 262151, 65536, 1, 393208, 0, 1, 393209, 0, 1, 393210, 65536, 1, 393211, 0, 1, 393212, 0, 1, 393213, 65536, 0, 393214, 0, 1, 393215, 0, 1, 327680, 0, 1, 327681, 0, 1, 327682, 65536, 0, 327683, 0, 1, 327684, 0, 1, 327685, 0, 1, 327686, 0, 1, 327687, 0, 1)
+
+[node name="Enemy" parent="." instance=ExtResource("4_bm1ja")]
+position = Vector2(559, 431)
+scale = Vector2(3, 3)
+collision_layer = 2
+collision_mask = 8

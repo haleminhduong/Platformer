@@ -1,1 +1,5 @@
+res://scenes/entities/enemy.tscn
+res://scripts/enemy.gd
+res://scripts/actor.gd
+res://scripts/player.gd
 res://scenes/levels/level_1.tscn

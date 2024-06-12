@@ -51,13 +51,6 @@ func calculate_movement(direction : Vector2, velocity : Vector2) -> Vector2:
             
     return velocity
     
-func flip(current: bool, directionX : int) -> bool:
-    if directionX == 1:
-        return false
-    elif directionX == -1:
-        return true
-    else:
-        return current
     
 #func _physics_process(delta: float) -> void:
 #    
